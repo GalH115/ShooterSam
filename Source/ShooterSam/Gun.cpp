@@ -3,6 +3,9 @@
 #include "Kismet/GameplayStatics.h"
 #include "Gun.h"
 
+#define LOG(x) UE_LOG(LogTemp, Display, TEXT(x))
+#define LOG_WARNING(x) UE_LOG(LogTemp, Warning, TEXT(x))
+
 // Sets default values
 AGun::AGun()
 {
