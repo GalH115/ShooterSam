@@ -114,5 +114,5 @@ public:
 
 	float Health;
 
-	bool IsAlive = true;
+	UPROPERTY(BlueprintReadOnly) bool IsAlive = true;
 };
