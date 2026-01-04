@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "Kismet/GameplayStatics.h"
 #include "Gun.h"
+#include "Kismet/GameplayStatics.h"
 
 #define LOG(x) UE_LOG(LogTemp, Display, TEXT(x))
 #define LOG_WARNING(x) UE_LOG(LogTemp, Warning, TEXT(x))
