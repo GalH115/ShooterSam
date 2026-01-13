@@ -1,16 +1,15 @@
-# Visual Studio files
-.vs/
-*.sln
-*.suo
-*.opensdf
-*.sdf
-
-# Unreal Engine generated folders
 Binaries/
 Intermediate/
 Saved/
 DerivedDataCache/
 Build/
+.idea/
+.vs/
+*.sln
+*.suo
+*.opensdf
+*.sdf
+Backup/
 
 # Local configuration
 Config/User*
