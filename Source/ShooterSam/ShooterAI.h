@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "AIController.h"
+#include "ShooterSamCharacter.h"
 #include "ShooterAI.generated.h"
 
 /**
@@ -17,4 +18,13 @@ class SHOOTERSAM_API AShooterAI : public AAIController
 protected:
 	virtual void BeginPlay() override;
 	
+public: 
+	virtual void Tick(float DeltaTime) override;
+	
+	UPROPERTY(EditAnywhere) UBehaviorTree* EnemyAIBehaviorTree;
+	
+	AShooterSamCharacter* PlayerCharacter;
+	AShooterSamCharacter* MyCharacter;
+	
+	void StartBehaviorTree(AShooterSamCharacter* Player);
 };
