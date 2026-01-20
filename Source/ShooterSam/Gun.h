@@ -28,17 +28,20 @@ public:
 	UPROPERTY(VisibleAnywhere) USceneComponent* SceneRoot;
 
 	UPROPERTY(VisibleAnywhere) USkeletalMeshComponent* SkeletalMeshComponent;
-
-	UPROPERTY(EditAnywhere) float MaxRange = 10000.0f;
-
+	
 	UPROPERTY(VisibleAnywhere) UNiagaraComponent* MuzzleFlashParticleSystem;
 
 	UPROPERTY(EditAnywhere) UNiagaraSystem* ImpactParticleSystem;
+	
+	UPROPERTY(EditAnywhere) float MaxRange = 10000.0f;
 
 	UPROPERTY(EditAnywhere) float BulletDamage = 10.0f;
-
-	void PullTrigger();
+	
+	UPROPERTY(EditAnywhere) USoundBase* ShootSound;
+	
+	UPROPERTY(EditAnywhere) USoundBase* ImpactSound;
 
 	AController* OwnerController;
-
+	
+	void PullTrigger();
 };

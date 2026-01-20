@@ -75,9 +75,6 @@ protected:
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
 
-	/** Called for shooting input */
-	void Shoot(const FInputActionValue& Value);
-
 public:
 
 	/** Handles move inputs from either controls or UI interfaces */
@@ -103,16 +100,23 @@ public:
 
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+	
+	/** Called for shooting input */
+	void Shoot();
 
 	UPROPERTY(EditAnywhere) TSubclassOf<AGun> GunClass;
-
-	AGun* Gun;
-
-	UFUNCTION() void OnDamageTaken(AActor* DamagedActor, float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
-
+	
 	UPROPERTY(EditAnywhere) float MaxHealth = 100.0f;
 
 	float Health;
-
+	
 	UPROPERTY(BlueprintReadOnly) bool IsAlive = true;
+
+	AGun* Gun;
+	
+	void UpdateHUD();
+
+	UFUNCTION() void OnDamageTaken(AActor* DamagedActor, float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
+
+	
 };
